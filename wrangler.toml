@@ -11,9 +11,9 @@ directory = "./public"
 # SESSION_SECRET
 
 [[d1_databases]]
-binding = "DB"
+binding = "aspectbot_db"
 database_name = "aspectbot_db"
-database_id = "your-database-id-here"
+database_id = "1bd95ea7-455f-4bc2-8ac6-7c2798e7f9e9"
 
 [vars]
-DISCORD_REDIRECT_URI = "https://your-domain.com/auth/callback"
+DISCORD_REDIRECT_URI = "https://aspectbot.app/auth/callback"
