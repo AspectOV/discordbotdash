@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Dashboard preview for A.S.P.E.C.T — server settings, modules, and account options." />
+  <title>Dashboard - A.S.P.E.C.T</title>
+
+  <link rel="stylesheet" href="/styles/main.css">
+  <link rel="icon" href="/favicon.ico">
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <a class="brand" href="/">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <strong>A.S.P.E.C.T</strong><br/>
+          <span style="font-size:12px;color:var(--muted)">Discord Bot</span>
+        </div>
+      </a>
+      <div class="navlinks">
+        <a href="/">Home</a>
+        <a href="/#features">Features</a>
+        <a href="/#dashboard">Dashboard</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </div>
+    </div>
+
+    <div class="page">
+      <div class="page-header">
+        <div>
+          <h1>Dashboard Preview</h1>
+          <p class="subtitle">
+            This is the home for server settings, module controls, and account options. The layout keeps the
+            existing style while expanding the configuration space.
+          </p>
+        </div>
+        <div class="status-card">
+          <h3>Account option</h3>
+          <p>
+            Link an owner account to unlock dashboard access. Account data can live on your own mini PC database
+            for full control and portability.
+          </p>
+          <div class="status-actions">
+            <span class="chip">Owner-linked</span>
+            <span class="chip">Self-hosted data</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-row">
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Server overview</h3>
+            <span class="chip">Live</span>
+          </div>
+          <p>
+            Snapshot your active modules, recent actions, and server health at a glance. Quick links keep routine
+            tasks one click away.
+          </p>
+        </div>
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Module toggles</h3>
+            <span class="chip">Rolling out</span>
+          </div>
+          <p>
+            Enable AI chat, economy, and automation per server. Each module gets its own configuration page with
+            safe defaults and guardrails.
+          </p>
+        </div>
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Economy tuning</h3>
+            <span class="chip">Planned</span>
+          </div>
+          <p>
+            Adjust earn rates, rewards, and cooldowns with presets for casual or competitive communities.
+          </p>
+        </div>
+      </div>
+
+      <div class="panel-row">
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Welcome flow</h3>
+            <span class="chip">Draft</span>
+          </div>
+          <p>
+            Configure greetings, auto-role rules, and onboarding content that matches your server style.
+          </p>
+        </div>
+        <div class="panel">
+          <div class="panel-header">
+            <h3>Audit history</h3>
+            <span class="chip">Optional</span>
+          </div>
+          <p>
+            Track configuration changes and export settings for quick backups or multi-server setups.
+          </p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <h3>Account + database flow</h3>
+        <p>
+          When you’re ready, the dashboard can connect to your mini PC database for account info, permissions, and
+          private settings. This keeps ownership data fully in your hands.
+        </p>
+        <div class="cta">
+          <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1330729582122500146" target="_blank" rel="noreferrer">
+            Invite to Discord →
+          </a>
+          <a class="btn ghost" href="/">
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="mini">
+        <span>© <span id="y"></span> A.S.P.E.C.T</span>
+        <span>•</span>
+        <a href="/">Home</a>
+        <span>•</span>
+        <a href="/privacy">Privacy Policy</a>
+        <span>•</span>
+        <a href="/terms">Terms of Service</a>
+      </div>
+      <div class="mini">
+        <span>Contact: support@aspectbot.app</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
