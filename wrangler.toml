@@ -4,3 +4,16 @@ compatibility_date = "2026-02-01"
 
 [assets]
 directory = "./public"
+
+# Environment variables (set these with wrangler secret put)
+# DISCORD_CLIENT_ID
+# DISCORD_CLIENT_SECRET
+# SESSION_SECRET
+
+[[d1_databases]]
+binding = "DB"
+database_name = "aspectbot_db"
+database_id = "your-database-id-here"
+
+[vars]
+DISCORD_REDIRECT_URI = "https://your-domain.com/auth/callback"
