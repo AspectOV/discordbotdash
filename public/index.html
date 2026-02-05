@@ -3,14 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="A.S.P.E.C.T — a modular Discord bot with AI chat, economy, roles, and more." />
-  <title>Home - Aspect</title>
+  <meta name="description" content="A.S.P.E.C.T — a modular Discord bot with AI chat, economy, roles, and server automation." />
+  <title>Home - A.S.P.E.C.T</title>
+
   <link rel="stylesheet" href="/styles/main.css">
-  <meta property="og:title" content="Home - Aspect">
+
+  <meta property="og:title" content="A.S.P.E.C.T — Discord Bot">
   <meta property="og:description" content="Modular Discord automation with AI chat, economy, roles, and more.">
   <meta property="og:url" content="https://aspectbot.app">
   <meta property="og:type" content="website">
-  <meta property="theme-color" content="#6366f1">
+  <meta name="theme-color" content="#6366f1">
+
   <link rel="icon" href="/favicon.ico">
 </head>
 <body>
@@ -25,6 +28,8 @@
       </a>
       <div class="navlinks">
         <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="/dashboard">Dashboard</a>
         <a href="/privacy">Privacy</a>
         <a href="/terms">Terms</a>
       </div>
@@ -35,14 +40,20 @@
         <div>
           <h1>Modular Discord automation — with AI chat.</h1>
           <p class="subtitle">
-            A.S.P.E.C.T is a slash-command focused bot with practical server features and an optional AI chatbot mode.
-            Built to be fast now, and expandable into a full dashboard later.
+            A.S.P.E.C.T is a slash-command focused Discord bot built for practical server management and community
+            features. It’s designed to feel lightweight in use, clean in configuration, and easy to expand over time.
           </p>
 
           <div class="cta">
-            <a class="btn primary" href="https://discord.com/oauth2/authorize?client_id=1330729582122500146" target="_blank" rel="noreferrer">Invite to Discord →</a>
-            <a class="btn" href="https://discord.gg/3NXxNr65kQ" target="_blank" rel="noreferrer">Support Server</a>
-            <a class="btn ghost" href="#features">See Features</a>
+            <a class="btn primary" href="https://discord.com/oauth2/authorize?client_id=1330729582122500146" target="_blank" rel="noreferrer">
+              Invite to Discord →
+            </a>
+            <a class="btn" href="https://discord.gg/3NXxNr65kQ" target="_blank" rel="noreferrer">
+              Support Server
+            </a>
+            <a class="btn ghost" href="/dashboard">
+              Open Dashboard
+            </a>
           </div>
 
           <div class="pillrow">
@@ -52,13 +63,18 @@
             <div class="pill">Roles</div>
             <div class="pill">Welcome / Utility</div>
           </div>
+
+          <div style="margin-top:16px;color:var(--muted);font-size:14px;max-width:70ch">
+            <b style="color:var(--text)">Goal:</b> Give server owners a bot that’s easy to run day-to-day, with advanced
+            features available when you want them — not shoved in your face during setup.
+          </div>
         </div>
 
         <div class="sidecard">
           <h3>Quick Info</h3>
           <p>
             A.S.P.E.C.T can log chatbot-related messages to a database you control and may send message content to
-            Google Gemini to generate responses (only for AI chat features).
+            Google Gemini to generate responses (only when AI chat commands are used).
           </p>
 
           <div class="stats">
@@ -66,6 +82,11 @@
             <div class="stat"><b>Privacy</b><span>Deletion requests supported</span></div>
             <div class="stat"><b>Fast</b><span>Cloudflare edge delivery</span></div>
             <div class="stat"><b>Modular</b><span>Easy to expand</span></div>
+          </div>
+
+          <div style="margin-top:12px;border-top:1px solid var(--line);padding-top:12px;color:var(--muted);font-size:13px">
+            Looking for settings? Use the <a href="/dashboard" style="color:var(--text);text-decoration:none;border-bottom:1px solid var(--line)">Dashboard</a>.
+            It’s a template right now, but it’s where the real config will live.
           </div>
         </div>
       </div>
@@ -75,35 +96,73 @@
       <h2>Core Features</h2>
       <div class="cards">
         <div class="card">
-          <h3>AI Chatbot (Chat.py)</h3>
-          <p>Slash-command chatbot that can use Google Gemini to generate responses.</p>
+          <h3>AI Chatbot</h3>
+          <p>
+            Slash-command chatbot that can use Google Gemini to generate responses. Designed to be optional and
+            invoked intentionally, not always-on message scraping.
+          </p>
         </div>
         <div class="card">
           <h3>Economy</h3>
-          <p>Balances, rewards, progression — configurable per server.</p>
+          <p>
+            Balances, rewards, and progression with room to expand into server shops, perks, and configurable earn rates.
+          </p>
         </div>
         <div class="card">
           <h3>Roles & Automation</h3>
-          <p>Role tools and automation to keep servers organized.</p>
+          <p>
+            Tools for roles and automation workflows. Built to reduce repetitive admin tasks and keep servers organized.
+          </p>
         </div>
         <div class="card">
           <h3>Welcome & Utility</h3>
-          <p>Welcome tools and practical utilities for moderation/admin work.</p>
+          <p>
+            Welcome messages, setup helpers, and practical utilities that make server management smoother.
+          </p>
         </div>
         <div class="card">
           <h3>Engagement</h3>
-          <p>Booster/engagement features to keep communities active.</p>
+          <p>
+            Features that reward active members and support community momentum (boosters, fun tools, and more).
+          </p>
         </div>
         <div class="card">
-          <h3>Expandable</h3>
-          <p>Built to grow into docs, dashboard, and APIs under aspectbot.app.</p>
+          <h3>Dashboard-ready</h3>
+          <p>
+            The architecture is built to grow into a full configuration dashboard and docs under aspectbot.app.
+          </p>
         </div>
+      </div>
+    </div>
+
+    <div id="how" class="section">
+      <h2>How it works</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>1) Invite</h3>
+          <p>Add A.S.P.E.C.T using the invite link and choose permissions intentionally.</p>
+        </div>
+        <div class="card">
+          <h3>2) Configure</h3>
+          <p>Use slash commands today, and the dashboard for settings as it rolls out.</p>
+        </div>
+        <div class="card">
+          <h3>3) Run</h3>
+          <p>Let the bot handle routine server tasks while you focus on your community.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:14px;color:var(--muted);font-size:14px;max-width:80ch">
+        <b style="color:var(--text)">Note on AI chat:</b> AI responses may be inaccurate. Use it for help and fun, but don’t
+        treat outputs as professional advice. Full details are in the Privacy Policy and Terms.
       </div>
     </div>
 
     <footer>
       <div class="mini">
         <span>© <span id="y"></span> A.S.P.E.C.T</span>
+        <span>•</span>
+        <a href="/dashboard">Dashboard</a>
         <span>•</span>
         <a href="/privacy">Privacy Policy</a>
         <span>•</span>
