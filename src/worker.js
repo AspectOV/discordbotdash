@@ -1,26 +1,26 @@
 export default {
   async fetch(request, env) {
-    const url = new URL(request.url);
+    const response = await env.ASSETS.fetch(request);
 
-    // Serve static assets (HTML/CSS/etc.) from /public
-    let res = await env.ASSETS.fetch(request);
-
-    // Optional: custom 404 fallback to /index.html (SPAs), NOT recommended for your case.
-    // We'll do a simple 404 instead for clarity.
-    if (res.status === 404) {
+    if (response.status === 404) {
       return new Response("Not Found", { status: 404 });
     }
 
-    // Nice caching for static stuff
-    const isHtml = res.headers.get("content-type")?.includes("text/html");
-    const headers = new Headers(res.headers);
+    const headers = new Headers(response.headers);
+    const contentType = headers.get("content-type") || "";
 
-    if (!isHtml) {
-      headers.set("cache-control", "public, max-age=86400");
+    if (contentType.includes("text/html")) {
+      headers.set("cache-control", "public, max-age=600");
+      headers.set("x-content-type-options", "nosniff");
+      headers.set("x-frame-options", "DENY");
+      headers.set("referrer-policy", "strict-origin-when-cross-origin");
     } else {
-      headers.set("cache-control", "public, max-age=300");
+      headers.set("cache-control", "public, max-age=86400");
     }
 
-    return new Response(res.body, { status: res.status, headers });
+    return new Response(response.body, {
+      status: response.status,
+      headers
+    });
   }
 };
