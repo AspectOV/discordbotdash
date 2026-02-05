@@ -1,6 +1,19 @@
-name = "aspectbot-site"
+name = "discordbot"
 main = "src/worker.js"
 compatibility_date = "2026-02-01"
 
 [assets]
 directory = "./public"
+
+# Environment variables (set these with wrangler secret put)
+# DISCORD_CLIENT_ID
+# DISCORD_CLIENT_SECRET
+# SESSION_SECRET
+
+[[d1_databases]]
+binding = "aspectbot_db"
+database_name = "aspectbot_db"
+database_id = "1bd95ea7-455f-4bc2-8ac6-7c2798e7f9e9"
+
+[vars]
+DISCORD_REDIRECT_URI = "https://aspectbot.app/auth/callback"
