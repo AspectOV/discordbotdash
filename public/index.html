@@ -1,1 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="A.S.P.E.C.T — a modular Discord bot with AI chat, economy, roles, and more." />
+  <title>A.S.P.E.C.T — Discord Bot</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="nav">
+      <a class="brand" href="/">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <strong>A.S.P.E.C.T</strong><br/>
+          <span style="font-size:12px;color:var(--muted)">Discord Bot</span>
+        </div>
+      </a>
+      <div class="navlinks">
+        <a href="#features">Features</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </div>
+    </div>
 
+    <div class="hero">
+      <div class="grid">
+        <div>
+          <h1>Modular Discord automation — with AI chat.</h1>
+          <p class="subtitle">
+            A.S.P.E.C.T is a slash-command focused bot with practical server features and an optional AI chatbot mode.
+            Built to be fast now, and expandable into a full dashboard later.
+          </p>
+
+          <div class="cta">
+            <a class="btn primary" href="https://discord.com/oauth2/authorize?client_id=1330729582122500146" target="_blank" rel="noreferrer">Invite to Discord →</a>
+            <a class="btn" href="https://discord.gg/3NXxNr65kQ" target="_blank" rel="noreferrer">Support Server</a>
+            <a class="btn ghost" href="#features">See Features</a>
+          </div>
+
+          <div class="pillrow">
+            <div class="pill">Slash Commands</div>
+            <div class="pill">AI Chat (Gemini)</div>
+            <div class="pill">Economy</div>
+            <div class="pill">Roles</div>
+            <div class="pill">Welcome / Utility</div>
+          </div>
+        </div>
+
+        <div class="sidecard">
+          <h3>Quick Info</h3>
+          <p>
+            A.S.P.E.C.T can log chatbot-related messages to a database you control and may send message content to
+            Google Gemini to generate responses (only for AI chat features).
+          </p>
+
+          <div class="stats">
+            <div class="stat"><b>HTTPS</b><span>Secure by default (.app)</span></div>
+            <div class="stat"><b>Privacy</b><span>Deletion requests supported</span></div>
+            <div class="stat"><b>Fast</b><span>Cloudflare edge delivery</span></div>
+            <div class="stat"><b>Modular</b><span>Easy to expand</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="features" class="section">
+      <h2>Core Features</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>AI Chatbot (Chat.py)</h3>
+          <p>Slash-command chatbot that can use Google Gemini to generate responses.</p>
+        </div>
+        <div class="card">
+          <h3>Economy</h3>
+          <p>Balances, rewards, progression — configurable per server.</p>
+        </div>
+        <div class="card">
+          <h3>Roles & Automation</h3>
+          <p>Role tools and automation to keep servers organized.</p>
+        </div>
+        <div class="card">
+          <h3>Welcome & Utility</h3>
+          <p>Welcome tools and practical utilities for moderation/admin work.</p>
+        </div>
+        <div class="card">
+          <h3>Engagement</h3>
+          <p>Booster/engagement features to keep communities active.</p>
+        </div>
+        <div class="card">
+          <h3>Expandable</h3>
+          <p>Built to grow into docs, dashboard, and APIs under aspectbot.app.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="mini">
+        <span>© <span id="y"></span> A.S.P.E.C.T</span>
+        <span>•</span>
+        <a href="/privacy">Privacy Policy</a>
+        <span>•</span>
+        <a href="/terms">Terms of Service</a>
+      </div>
+      <div class="mini">
+        <span>Contact: support@aspectbot.app</span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
